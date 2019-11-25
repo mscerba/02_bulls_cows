@@ -30,7 +30,7 @@ def generate_number():
             number.append(ran_num)
 
             i += 1
-    print(number)
+
     return number
 
 
@@ -52,14 +52,6 @@ def user_tip():
 
 # P4 Vyhodnocení zadání
 def value_tip(number, num_tip):
-    """
-    Input:
-        * string - number
-        * string - num_tip
-    Output:
-        * integer - shoda_pocice_cisla
-    """
-
     shoda_cisla = 0
     shoda_pozice_cisla = 0
 
@@ -79,17 +71,15 @@ def value_tip(number, num_tip):
 
 # P5 Vypíše výsledek
 def text_result(shoda_cisla, shoda_pozice_cisla):
-    """ Fce. vypise vysledek """
+    bull = 'bull'
+    cow = 'cows'
 
     if shoda_pozice_cisla > 1:
         bull = "bulls"
-    else:
-        bull = "bull"
 
-    if shoda_cisla > 1:
+    elif shoda_cisla > 1:
         cow = "cows"
-    else:
-        cow = "cow"
+
 
     print("%s %s, %s %s" % (shoda_pozice_cisla, bull, shoda_cisla, cow))
 
